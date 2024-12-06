@@ -12,6 +12,8 @@ This plugin currently provides the following features for **KKS**:
 - **Sunshafts**: Includes all settings and fixes the sun origin to align with the actual sun.
 - **Environment**: Adjust environmental lighting, projected colors, color source, intensity, and other related controls.
 
+Known issue: Resetting the entire scene may not reset some settings. Maybe it does though, just an inkling I have.
+
 [CharaStudio_VbqIISf6P5.webm](https://github.com/user-attachments/assets/7cc2434a-637b-45bb-84fd-72adc9e53be9)
 
 ### Install
