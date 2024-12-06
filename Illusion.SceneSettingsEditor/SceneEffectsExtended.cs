@@ -31,7 +31,7 @@ namespace Illusion.SceneEffectsExtended
 	[BepInPlugin(Guid, DisplayName, Version)]
 	internal class SceneEffectsExtended : BaseUnityPlugin
 	{
-		public const string Guid = "com.krypto.plugin.sceneeffectsextended";
+		public const string Guid = "org.krypto5863.illusion.sceneeffectsextended";
 		public const string DisplayName = "SceneEffectsExtended";
 		public const string Version = "1.0";
 
