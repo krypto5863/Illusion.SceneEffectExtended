@@ -10,7 +10,7 @@ This plugin currently provides the following features for **KKS**:
 - **Fog**: Full customization capabilities.
 - **Bloom**: Complete control over settings.
 - **Sunshafts**: Includes all settings and fixes the sun origin to align with the actual sun.
-- **Environment**: Adjust environmental lighting, skybox colors, intensity, and other related controls.
+- **Environment**: Adjust environmental lighting, projected colors, color source, intensity, and other related controls.
 
 [CharaStudio_VbqIISf6P5.webm](https://github.com/user-attachments/assets/7cc2434a-637b-45bb-84fd-72adc9e53be9)
 
