@@ -11,3 +11,6 @@ This plugin currently provides the following features for **KKS**:
 - **Bloom**: Complete control over settings.
 - **Sunshafts**: Includes all settings and fixes the sun origin to align with the actual sun.
 - **Environment**: Adjust environmental lighting, skybox colors, intensity, and other related controls.
+
+### Install
+Throw the DLL in release into Bepinex/plugins.
