@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Illusion.SceneEffectsExtended", "Illusion.SceneSettingsEditor\Illusion.SceneEffectsExtended.shproj", "{40CD9CD8-55D7-47BB-8F50-8AFF30EEC3E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKS.SceneEffectsExtended", "KKS.SceneSettingsEditor\KKS.SceneEffectsExtended.csproj", "{8369BE6C-DAED-41A8-93F0-A4BD8ED3B942}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HS2.SceneEffectsExtended", "HS2.SceneSettingsEditor\HS2.SceneEffectsExtended.csproj", "{E6376652-6E10-4F85-BD39-C4A88C313342}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8369BE6C-DAED-41A8-93F0-A4BD8ED3B942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8369BE6C-DAED-41A8-93F0-A4BD8ED3B942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8369BE6C-DAED-41A8-93F0-A4BD8ED3B942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8369BE6C-DAED-41A8-93F0-A4BD8ED3B942}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6376652-6E10-4F85-BD39-C4A88C313342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6376652-6E10-4F85-BD39-C4A88C313342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6376652-6E10-4F85-BD39-C4A88C313342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6376652-6E10-4F85-BD39-C4A88C313342}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF29047A-5FC5-4C3D-B697-5C4A3617906D}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Illusion.SceneSettingsEditor\Illusion.SceneSettingsEditor.projitems*{40cd9cd8-55d7-47bb-8f50-8aff30eec3e0}*SharedItemsImports = 13
+		Illusion.SceneSettingsEditor\Illusion.SceneSettingsEditor.projitems*{8369be6c-daed-41a8-93f0-a4bd8ed3b942}*SharedItemsImports = 4
+		Illusion.SceneSettingsEditor\Illusion.SceneSettingsEditor.projitems*{e6376652-6e10-4f85-bd39-c4a88c313342}*SharedItemsImports = 4
+	EndGlobalSection
+EndGlobal
