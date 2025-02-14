@@ -137,6 +137,12 @@
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.Unity.Analyzers.1.18.0\analyzers\dotnet\cs\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KKS.MapSunshaftFix\KKS.SceneEffectFixes.csproj">
+      <Project>{f87a384b-b760-441c-a2d1-9edaee84f511}</Project>
+      <Name>KKS.SceneEffectFixes</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="..\Illusion.SceneSettingsEditor\Illusion.SceneSettingsEditor.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\IllusionLibs.BepInEx.Harmony.2.9.0\build\IllusionLibs.BepInEx.Harmony.targets" Condition="Exists('..\packages\IllusionLibs.BepInEx.Harmony.2.9.0\build\IllusionLibs.BepInEx.Harmony.targets')" />

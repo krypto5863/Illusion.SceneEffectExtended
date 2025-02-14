@@ -8,11 +8,14 @@ using Illusion.UGUI;
 using KKAPI.Studio;
 using KKAPI.Studio.SaveLoad;
 using KKAPI.Studio.UI;
+using KKS.SceneEffectFixes;
 using MessagePack;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 using UnityStandardAssets.ImageEffects;
+using static UnityStandardAssets.ImageEffects.VignetteAndChromaticAberration;
+
 
 #if KKS
 using Tonemapping = AmplifyColor.Tonemapping;
@@ -28,6 +31,7 @@ namespace Illusion.SceneEffectsExtended
 
 	[BepInDependency(KKAPI.KoikatuAPI.GUID, KKAPI.KoikatuAPI.VersionConst)]
 	[BepInDependency(ExtendedSave.GUID)]
+	[BepInDependency(SceneEffectFixes.Guid, SceneEffectFixes.Version)]
 	[BepInPlugin(Guid, DisplayName, Version)]
 	internal class SceneEffectsExtended : BaseUnityPlugin
 	{
@@ -214,6 +218,11 @@ namespace Illusion.SceneEffectsExtended
 			AddSliderAndSync(category, PrintFullName<AmplifyOcclusionEffect>(nameof(AmplifyOcclusionEffect.Bias)), "Bias", () => aoEffect.Bias,
 				f => { aoEffect.Bias = f; }, 0, 0.5f);
 
+			AddEnumDropdownAndSync<AmplifyOcclusionBase.PerPixelNormalSource>(category,
+				PrintFullName<AmplifyOcclusionEffect>(nameof(AmplifyOcclusionEffect.PerPixelNormals)),
+				"Per Pixel Normals", () => aoEffect.PerPixelNormals,
+				@enum => { aoEffect.PerPixelNormals = (AmplifyOcclusionBase.PerPixelNormalSource)@enum; });
+
 			category.AddLabelSet("Fade");
 
 			AddToggleAndSync(category, PrintFullName<AmplifyOcclusionEffect>(nameof(aoEffect.enabled)), "Enabled", () => aoEffect.FadeEnabled, b =>
@@ -310,6 +319,11 @@ namespace Illusion.SceneEffectsExtended
 					chromaticAndVignetteEffect.mode = (AberrationMode)@enum;
 				});
 			*/
+
+			AddEnumDropdownAndSync<AberrationMode>(category,
+				PrintFullName<VignetteAndChromaticAberration>(nameof(VignetteAndChromaticAberration.mode)), "Mode",
+				() => chromaticAndVignetteEffect.mode,
+				@enum => { chromaticAndVignetteEffect.mode = (AberrationMode)@enum; });
 
 			AddSliderAndSync(category,
 				PrintFullName<VignetteAndChromaticAberration>(nameof(VignetteAndChromaticAberration.intensity)), "Intensity", () => chromaticAndVignetteEffect.intensity,

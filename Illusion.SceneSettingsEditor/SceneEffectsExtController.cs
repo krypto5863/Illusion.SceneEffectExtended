@@ -1,43 +1,14 @@
-﻿using ExtensibleSaveFormat;
-using IllusionUtility.GetUtility;
+﻿using System.Collections.Generic;
+using ExtensibleSaveFormat;
 using KKAPI.Studio.SaveLoad;
 using KKAPI.Utilities;
 using Studio;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.ImageEffects;
 
 namespace Illusion.SceneEffectsExtended
 {
 	internal class SceneEffectsExtController : SceneCustomFunctionController
 	{
-		private static Material _oldSkyBoxMaterial;
-		private static Light _oldSun;
-
-		//Monitors some basics to call DynamicGI updates.
-		void Update()
-		{
-			if (_oldSkyBoxMaterial != RenderSettings.skybox)
-			{
-				DynamicGI.UpdateEnvironment();
-				_oldSkyBoxMaterial = RenderSettings.skybox;
-			}
-
-			if (_oldSun != RenderSettings.sun)
-			{
-				if (RenderSettings.sun?.transform?.parent != null)
-				{
-					var sunShafter = Camera.main.GetComponent<SunShafts>();
-					if (sunShafter != null)
-					{
-						sunShafter.sunTransform = RenderSettings.sun.transform.parent.FindLoop("Position")?.transform;
-					}
-				}
-				DynamicGI.UpdateEnvironment();
-				_oldSun = RenderSettings.sun;
-			}
-		}
-
 		protected override void OnSceneSave()
 		{
 			var pluginData = new PluginData
